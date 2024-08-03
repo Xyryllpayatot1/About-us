@@ -71,182 +71,202 @@
         }
 
         #welcome {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-        #header a {
-            font-size: 45px;
-            color: #fff;
-            transition: all 0.2s ease-in-out;
-        }
+#header a {
+  font-size: 45px;
+  color: #fff;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
 
-        #header a:hover {
-            font-size: 50px;
-        }
+#header a:hover {
+  font-size: 50px;
+}
 
-        .fa-angle-double-down {
-            vertical-align: 8%;
-        }
+/* SCROLL DOWN ARROW */
+.fa-angle-double-down {
+  vertical-align: 8%;
+}
 
-        /* ABOUT ME */
-        #aboutme {
-            padding: 50px 75px;
-            background: black;
-            color: white;
-        }
+/* SECTION 1 WRAPPER */
+#wrapper1 {
+    font-family: Roboto Slab;
+    padding: 0;
+    margin: 0;
+    color: white;
+    position: center;
+    background: url('http://joelstephenson.com/images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+    
+}
 
-        /* PORTFOLIO */
-        #portfolio {
-            background: #f5f5f5;
-            color: #55606A;
-            padding: 50px 90px 100px 90px;
-        }
+/* ABOUT ME WRAPPER */
+#aboutme {
+  margin-top: 5px;
+  margin-bottom: 100px;
+  background: black;
+  color: white;
+  margin-left: 75px;
+  margin-right: 75px;
+}
 
-        /* FOOTER */
-        #footer {
-            background: #fff;
-            color: #55606A;
-            padding: 50px 0 35px 0;
-            text-align: center;
-        }
+/* PORTFOLIO DIV */
+#portfolio {
+  background: #f5f5f5;
+  color: #55606A;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin-top: 0px;
+  
+}
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Roboto Slab', serif;
-            margin-bottom: 14px;
-        }
+/* FOOTER DIV */
+#footer {
+  background: #ffffff;
+  color: #55606A;
+  padding-top: 50px;
+  padding-bottom: 35px;
+  text-align: center;
+}
 
-        h1 {
-            font-size: 80px;
-            font-family: 'Oswald', sans-serif;
-            letter-spacing: 3px;
-            line-height: 80px;
-            font-weight: 500;
-        }
+h1, h2, h3, h4, h5, h6, {
+  font-family: Roboto Slab;
+  margin-bottom: 14px
+}
 
-        h2 {
-            font-size: 32px;
-            line-height: 36px;
-        }
+h1 {
+  font-size: 80px;
+  font-family: Oswald;
+  letter-spacing: 3px;
+  line-height: 80px;
+  font-weight: 500;
+  word-wrap: break-word;
+}
 
-        h3 {
-            font-size: 26px;
-            line-height: 29px;
-        }
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+}
 
-        h4 {
-            font-size: 20px;
-            line-height: 25px;
-        }
+h3 {
+  font-size: 26px;
+  line-height: 29px;
+}
 
-        h5 {
-            font-size: 16px;
-            line-height: 21px;
-        }
+h4 {
+  font-size: 20px;
+  line-height: 25px;
+}
 
-        h6 {
-            font-size: 15px;
-        }
+h5 {
+  font-size: 16px;
+  line-height: 21px;
+}
 
-        .logo {
-            color: #fff;
-            padding-top: 8px;
-            padding-left: 75px;
-            font-size: 25px;
-        }
+h6 {
+  font-size: 15px;
+}
 
-        .sublogo {
-            color: #fff;
-            padding-left: 75px;
-            font-size: 11px;
-            font-weight: 100;
-            text-align: left;
-            letter-spacing: 5px;
-        }
+.logo {
+  color: #ffffff;
+  padding-top: 8px;
+  padding-left: 75px;
+  font-size: 25px;
+  line-height: 18px;
+}
 
-        .left {
-            float: left;
-        }
+.logo a {
+  color: #ffffff;
+  padding-left: 75px;
+  font-size: 25px;
+  line-height: 18px;
+}
 
-        .right {
-            float: right;
-        }
+.sublogo {
+  color: #ffffff;
+  padding-left: 75px;
+  font-size: 11px;
+  font-weight: 100;
+  text-align: left;
+  letter-spacing: 5px;
+}
 
-        /* BUTTON */
-        .btn-circle {
-            width: 70px;
-            height: 70px;
-            border: 2px solid #fff;
-            border-radius: 50%;
-        }
+.left {
+  float: left;
+}
 
-        .btn-circle:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
+.right {
+  float: right;
+}
 
-        /* IMAGES */
-        .img-round {
-            border-radius: 50%;
-            height: 250px;
-            width: 250px;
-        }
+/* SCROLL DOWN BUTTON */
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
 
-        .img-responsive {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
+.btn-circle:hover {
+  background: rgba(255,255,255,0.1);
+}
 
-        /* SOCIAL ICONS */
-        .icon-btn {
-            text-align: center;
-            font-size: 30px;
-            letter-spacing: 30px;
-            text-indent: 30px;
-        }
+/* HEADSHOT */
+.img-round {
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+}
 
-        a {
-            color: #55606A;
-        }
+/* SOCIAL ICONS */
+.icon-btn {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 30px;
+  text-indent: 30px;
+}
 
-        a:hover {
-            color: black;
-            transition: all 0.3s ease-in-out;
-        }
+a {
+  color: #55606A;
+}
 
-        .twitter-icn:hover {
-            color: #48c4d2;
-        }
+a:hover {
+  color: black;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
 
-        .facebook-icn:hover {
-            color: #3b5998;
-        }
+.twitter-icn:hover {
+  color: #48c4d2;
+}
 
-        .instagram-icn:hover {
-            color: #fb913f;
-        }
+.facebook-icn:hover {
+  color: #3b5998;
+}
 
-        @media screen and (max-width: 768px) {
-            h1 {
-                font-size: 30px;
-            }
+.instagram-icn:hover {
+  color: #fb913f;
+}
 
-            .navigation ul li {
-                display: block;
-            }
+@media screen and (max-width: 768px) {
+    h1{
+        font-size:30px;
+    }
+}
 
-            .navigation a {
-                display: block;
-                padding: 10px;
-            }
-        }
+
     </style>
 </head>
 
