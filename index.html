@@ -1,378 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Oswald:400,700');
+
+        body {
+            font-family: 'Roboto Slab', serif;
+            background: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NAVBAR */
+        .navigation {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 45px;
+            text-align: center;
+            padding-right: 75px;
+            z-index: 1;
+            box-shadow: 0 0 2px #000;
+            background-color: rgba(1, 1, 1, 0.7);
+            color: #fff;
+        }
+
+        .navigation a {
+            font-size: 16px;
+            padding: 8px 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navigation ul {
+            margin-top: 12px;
+            padding: 0;
+        }
+
+        .navigation ul li {
+            list-style-type: none;
+            display: inline;
+        }
+
+        .navigation li:before {
+            content: " | ";
+            color: #fff;
+        }
+
+        .navigation li:first-child:before {
+            content: none;
+        }
+
+        .navigation li a:hover {
+            color: #ccc;
+            font-weight: 600;
+        }
+
+        /* HEADER */
+        #header {
+            text-align: center;
+            background: url('http://joelstephenson.com/images/bg2.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+        }
+
+        #welcome {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #header a {
+            font-size: 45px;
+            color: #fff;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #header a:hover {
+            font-size: 50px;
+        }
+
+        .fa-angle-double-down {
+            vertical-align: 8%;
+        }
+
+        /* ABOUT ME */
+        #aboutme {
+            padding: 50px 75px;
+            background: black;
+            color: white;
+        }
+
+        /* PORTFOLIO */
+        #portfolio {
+            background: #f5f5f5;
+            color: #55606A;
+            padding: 50px 90px 100px 90px;
+        }
+
+        /* FOOTER */
+        #footer {
+            background: #fff;
+            color: #55606A;
+            padding: 50px 0 35px 0;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: 80px;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 3px;
+            line-height: 80px;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        h3 {
+            font-size: 26px;
+            line-height: 29px;
+        }
+
+        h4 {
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        h5 {
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        h6 {
+            font-size: 15px;
+        }
+
+        .logo {
+            color: #fff;
+            padding-top: 8px;
+            padding-left: 75px;
+            font-size: 25px;
+        }
+
+        .sublogo {
+            color: #fff;
+            padding-left: 75px;
+            font-size: 11px;
+            font-weight: 100;
+            text-align: left;
+            letter-spacing: 5px;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        /* BUTTON */
+        .btn-circle {
+            width: 70px;
+            height: 70px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+        }
+
+        .btn-circle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* IMAGES */
+        .img-round {
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+        }
+
+        .img-responsive {
+            width: 100%;
+            height: auto;
+        }
+
+        /* SOCIAL ICONS */
+        .icon-btn {
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 30px;
+            text-indent: 30px;
+        }
+
+        a {
+            color: #55606A;
+        }
+
+        a:hover {
+            color: black;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .twitter-icn:hover {
+            color: #48c4d2;
+        }
+
+        .facebook-icn:hover {
+            color: #3b5998;
+        }
+
+        .instagram-icn:hover {
+            color: #fb913f;
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            .navigation ul li {
+                display: block;
+            }
+
+            .navigation a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
 <body>
 
-  <!-- START NAVBAR -->
-  <div id="wrapper1" class="container-fluid">
-    <nav class="navigation">
-      <div class="left">
-        <div class="logo">Team Xy</div>
-        <div class="sublogo">Programming Team</div>
-      </div>
+    <!-- START NAVBAR -->
+    <div id="wrapper1" class="container-fluid">
+        <nav class="navigation">
+            <div class="left">
+                <div class="logo">Team Xy</div>
+                <div class="sublogo">Programming Team</div>
+            </div>
 
-      <div class="right">
-        <ul>
-          <li><a href="#aboutme">ABOUT ME</a></li>
-          <li><a href="#portfolio">PORTFOLIO</a></li>
-          <li><a href="#footer">CONTACT</a></li>
-        </ul>
-      </div>
-    </nav>
-
+            <div class="right">
+                <ul>
+                    <li><a href="#aboutme">ABOUT ME</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#footer">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <!-- END NAVBAR -->
 
     <!-- START HEADER -->
-
     <div id="header" class="container-fluid">
-      <div id="welcome">
-        <h1>WELCOME</h1>
-        <h4 style="padding-bottom: 50px">Let's create amazing things together.</h4>
-        <a href="#aboutme" class="btn btn-circle">
-          <i class="fa fa-angle-double-down"></i>
-        </a>
-      </div>
+        <div id="welcome">
+            <h1>WELCOME</h1>
+            <h4 style="padding-bottom: 50px">Let's create amazing things together.</h4>
+            <a href="#aboutme" class="btn btn-circle">
+                <i class="fa fa-angle-double-down"></i>
+            </a>
+        </div>
     </div>
-  </div>
-  <!-- END WRAPPER -->
+    <!-- END HEADER -->
 
-  <!-- START ABOUT ME -->
-
-  <div id="aboutme" class="container-fluid">
-    <div class="row" style="padding-top: 50px">
-      <div class="col-md-8">
-        <h4>ABOUT US</h4><br>
-<p>We are Team XY. Originally, we were part of Team Freenet. However, due to increasing toxicity within the group, we decided to leave and form our own team, led by Xyryll, also known as XyryllPanget. Team Freenet was established in 2022, and during our time there, we developed various apps and messenger chatbots like Uzuki Mikata VPN, Keziah Bot, Uzuki Mikata, OkehAI, XyAI, and more.</p><br>
-
-<p>Our mission is to assist students as much as possible. Currently, we are developing projects such as XyAI and Uzuki Mikata V4, which will be available on Discord, Telegram, and Messenger. We hope you support us in these projects.</p>
-
-      </div>
-      <div class="col-md-4 text-center">
-        <img src="https://img.photouploads.com/file/PhotoUploads-com/S1lU.png" class="img-round"></img>
-      </div>
+    <!-- START ABOUT ME -->
+    <div id="aboutme" class="container-fluid">
+        <div class="row" style="padding-top: 50px">
+            <div class="col-md-8">
+                <h4>ABOUT US</h4><br>
+                <p>We are Team XY. Originally, we were part of Team Freenet. However, due to increasing toxicity within the group, we decided to leave and form our own team, led by Xyryll, also known as XyryllPanget. Team Freenet was established in 2022, and during our time there, we developed various apps and messenger chatbots like Uzuki Mikata VPN, Keziah Bot, Uzuki Mikata, OkehAI, XyAI, and more.</p><br>
+                <p>Our mission is to assist students as much as possible. Currently, we are developing projects such as XyAI and Uzuki Mikata V4, which will be available on Discord, Telegram, and Messenger. We hope you support us in these projects.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="https://img.photouploads.com/file/PhotoUploads-com/S1lU.png" class="img-round">
+            </div>
+        </div>
     </div>
-  </div>
+    <!-- END ABOUT ME -->
 
-  <!-- END ABOUT ME -->
-
-  <!-- START PORTFOLIO -->
-
-  <div id="portfolio" class="container-fluid">
-    <h4>SOME OF OUR PROJECTS</h4><br><br>
-    <div class="row">
-      <div class="col-md-6" style="margin-bottom: 10px">
-        <img src="https://img.photouploads.com/file/PhotoUploads-com/S1lf.jpg" class="img-responsive">
-      </div>
-      <div class="col-md-6" style="margin-bottom: 10px">
-        <img src="https://img.photouploads.com/file/PhotoUploads-com/S1l2.jpg" class="img-responsive">
-      </div>
+    <!-- START PORTFOLIO -->
+    <div id="portfolio" class="container-fluid">
+        <h4>SOME OF OUR PROJECTS</h4><br><br>
+        <div class="row">
+            <div class="col-md-6" style="margin-bottom: 10px">
+                <img src="https://img.photouploads.com/file/PhotoUploads-com/S1lf.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-6" style="margin-bottom: 10px">
+                <img src="https://img.photouploads.com/file/PhotoUploads-com/S1l2.jpg" class="img-responsive">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6" style="margin-bottom: 10px">
+                <img src="https://img.photouploads.com/file/PhotoUploads-com/S1lK.png" class="img-responsive">
+            </div>
+            <div class="col-md-6" style="margin-bottom: 10px">
+                <img src="https://img.photouploads.com/file/PhotoUploads-com/S1lV.png" class="img-responsive">
+            </div>
+        </div>
     </div>
-    <BR>
-    <div class="row">
-      <div class="col-md-6" style="margin-bottom: 10px">
-        <img src="https://img.photouploads.com/file/PhotoUploads-com/S1lK.png" class="img-responsive">
-      </div>
-      <div class="col-md-6" style="margin-bottom: 10px">
-        <img src="https://img.photouploads.com/file/PhotoUploads-com/S1lV.png" class="img-responsive">
-      </div>
+    <!-- END PORTFOLIO -->
+
+    <!-- START FOOTER -->
+    <div id="footer" class="container-fluid">
+        <a href="https://www.facebook.com/profile.php?id=100095362191129" target="_blank" class="icon-btn facebook-icn"><i class="fa fa-facebook"></i></a>
+        <br><br>
+        <p>COPYRIGHT © 2024 Team Xy and partners</p>
     </div>
-  </div>
+    <!-- END FOOTER -->
 
-  <!-- END PORTFOLIO -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
 
-  <!-- START FOOTER -->
-  <div id="footer" class="container-fluid">
-    <a href="https://www.facebook.com/profile.php?id=100095362191129" target="blank" class="icon-btn facebook-icn"><i class="fa fa-facebook"></i></a>
-    <br><br>
-    <p>COPYRIGHT © 2024 Team Xy and partners</p>
+                var target = this.hash;
+                var $target = $(target);
 
-  </div>
-
-  <!-- END FOOTER -->
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
 </body>
 
-<script>$(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash;
-	    var $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
-});</script>
-
-<style>@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
-
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
-
-html { 
-}
-
-body {
-  font-family: Roboto Slab;
-  background: black;
-  color: white;
-  height: 100%;
-  width: 100%;
-}
-
-/* NAVBAR */
-.navigation {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 45px;
-  text-align: center;
-  padding-top: 0px;
-  padding-right: 75px;
-  z-index: 1;
-  /* SHADOW */
-  -webkit-box-shadow: 0px 0px 2px 0px   #000000;
-  -moz-box-shadow: 0px 0px 2px 0px       #000000;
-  box-shadow: 0px 0px 2px 0px #000000;
-  /* TRANSPARENCY */
-  background-color: rgba(1, 1, 1,       0.7);
-  color: rgba(1, 1, 1, 0.7);
-}
-
-.navigation a {
-  font-size: 16px;
-  padding-top: 8px;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.navigation ul
-{
-    margin-top: 12px;
-}
-
-.navigation ul li
-{
-    list-style-type: none;
-    display: inline;
-}
-
-.navigation li:before {
-  content: " | ";
-  color: #fff;
-}
-
-.navigation li:first-child:before {
-content: none;
-}
-
-.navigation li a:hover {
-  color: #CCCCCC;
-  font-weight: 600;
-}
-
-/* HEADER DIV */
-#header {
-  text-align: center;
-  
-}
-
-#welcome {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#header a {
-  font-size: 45px;
-  color: #fff;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-#header a:hover {
-  font-size: 50px;
-}
-
-/* SCROLL DOWN ARROW */
-.fa-angle-double-down {
-  vertical-align: 8%;
-}
-
-/* SECTION 1 WRAPPER */
-#wrapper1 {
-    font-family: Roboto Slab;
-    padding: 0;
-    margin: 0;
-    color: white;
-    position: center;
-    background: url('http://joelstephenson.com/images/bg2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    
-    
-}
-
-/* ABOUT ME WRAPPER */
-#aboutme {
-  margin-top: 5px;
-  margin-bottom: 100px;
-  background: black;
-  color: white;
-  margin-left: 75px;
-  margin-right: 75px;
-}
-
-/* PORTFOLIO DIV */
-#portfolio {
-  background: #f5f5f5;
-  color: #55606A;
-  padding-left: 90px;
-  padding-right: 90px;
-  padding-top: 50px;
-  padding-bottom: 100px;
-  margin-top: 0px;
-  
-}
-
-/* FOOTER DIV */
-#footer {
-  background: #ffffff;
-  color: #55606A;
-  padding-top: 50px;
-  padding-bottom: 35px;
-  text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6, {
-  font-family: Roboto Slab;
-  margin-bottom: 14px
-}
-
-h1 {
-  font-size: 80px;
-  font-family: Oswald;
-  letter-spacing: 3px;
-  line-height: 80px;
-  font-weight: 500;
-  word-wrap: break-word;
-}
-
-h2 {
-  font-size: 32px;
-  line-height: 36px;
-}
-
-h3 {
-  font-size: 26px;
-  line-height: 29px;
-}
-
-h4 {
-  font-size: 20px;
-  line-height: 25px;
-}
-
-h5 {
-  font-size: 16px;
-  line-height: 21px;
-}
-
-h6 {
-  font-size: 15px;
-}
-
-.logo {
-  color: #ffffff;
-  padding-top: 8px;
-  padding-left: 75px;
-  font-size: 25px;
-  line-height: 18px;
-}
-
-.logo a {
-  color: #ffffff;
-  padding-left: 75px;
-  font-size: 25px;
-  line-height: 18px;
-}
-
-.sublogo {
-  color: #ffffff;
-  padding-left: 75px;
-  font-size: 11px;
-  font-weight: 100;
-  text-align: left;
-  letter-spacing: 5px;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-/* SCROLL DOWN BUTTON */
-.btn-circle {
-  width: 70px;
-  height: 70px;
-  border: 2px solid #fff;
-  border-radius: 100%;
-}
-
-.btn-circle:hover {
-  background: rgba(255,255,255,0.1);
-}
-
-/* HEADSHOT */
-.img-round {
-  border-radius: 100%;
-  height: 250px;
-  width: 250px;
-}
-
-/* SOCIAL ICONS */
-.icon-btn {
-  text-align: center;
-  font-size: 30px;
-  letter-spacing: 30px;
-  text-indent: 30px;
-}
-
-a {
-  color: #55606A;
-}
-
-a:hover {
-  color: black;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.twitter-icn:hover {
-  color: #48c4d2;
-}
-
-.facebook-icn:hover {
-  color: #3b5998;
-}
-
-.instagram-icn:hover {
-  color: #fb913f;
-}
-
-@media screen and (max-width: 768px) {
-    h1{
-        font-size:30px;
-    }
-}
-
-
-</style>
-
+</html>
